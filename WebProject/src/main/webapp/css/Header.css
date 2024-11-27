@@ -1,0 +1,168 @@
+@charset "UTF-8";
+body{
+    font-family: 'Trajan', sans-serif; 
+}
+/* ĐẶT CHIỀU CAO VÀ MÀU NỀN CHO THANH NAVBAR */
+.custom-navbar {
+    display: flex;
+    justify-content: space-between; /* Chia khoảng cách giữa trái và phải */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    background: #3b5d50 !important;
+    padding: 10px 40px;
+}
+
+/* ĐỊNH DẠNG CHỮ SHOP */
+.navbar-brand-container {
+    flex-shrink: 0; /* Không để chữ "Shop" bị thu nhỏ */
+}
+
+.navbar-brand {
+    font-size: 24px;
+    color: #fff !important;
+    font-weight: bold;
+    text-decoration: none;
+    padding-top: 5px; /* Hạ chữ "Shop" xuống */
+}
+
+/* ĐỊNH DẠNG MENU */
+.custom-navbar-nav {
+    display: flex;
+    gap: 20px;
+    list-style: none; /* Xóa dấu chấm */
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+
+.custom-navbar-nav .nav-link {
+    text-decoration: none; /* Xóa gạch chân */
+    color: #fff; /* Màu chữ trắng */
+    font-size: 16px;
+    padding: 0;
+    position: relative; /* Để thêm hiệu ứng */
+    transition: color 0.3s ease, font-weight 0.3s ease; /* Hiệu ứng chuyển màu và đậm chữ */
+}
+.custom-navbar-nav .nav-link:hover {
+    color: #f8c292; /* Màu chữ khi hover */
+}
+
+.custom-navbar-nav .nav-link::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #f8c292;
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3s ease-in-out;
+}
+.custom-navbar-nav .nav-link:hover::after {
+    width: 100%;
+}
+
+/* GẠCH CHÂN CỐ ĐỊNH KHI Ở TRANG HIỆN TẠI */
+.custom-navbar-nav .nav-link.active::after {
+    width: 100%;
+    
+}
+/* MENU BÊN PHẢI */
+.menu-right {
+    display: flex;
+    align-items: center;
+    gap: 120px; /* Tạo khoảng cách giữa các phần tử */
+}
+
+/* ĐỊNH DẠNG CHO ICON VÀ Ô TÌM KIẾM */
+.custom-navbar-cta {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+}
+
+/* ĐỊNH DẠNG CHO ICON VÀ Ô TÌM KIẾM */
+.search-container {
+    position: relative; /* Định vị tương đối để input phụ thuộc vào container */
+}
+
+/* ĐỊNH DẠNG CHO ICON VÀ Ô TÌM KIẾM */
+.search-container {
+    position: relative; /* Tạo vị trí tương đối cho container */
+}
+
+.search-icon {
+    color: #fff;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.search-icon:hover {
+    transform: scale(1.2);
+}
+
+/* Định dạng ô tìm kiếm */
+.search-input {
+    position: absolute; /* Tách ô tìm kiếm ra khỏi luồng chính */
+    top: 50%; /* Căn giữa theo chiều dọc container */
+    left: -130px; /* Di chuyển ô tìm kiếm sang bên trái (200px chiều rộng + padding) */
+    transform: translateY(-50%); /* Căn giữa theo chiều cao */
+    display: none; /* Mặc định ẩn */
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    border-radius: 4px;
+    outline: none;
+    font-size: 14px;
+    width: 100px; /* Định kích thước */
+    background-color: #fff;
+    color: #000;
+    z-index: 1000; /* Hiển thị trên các phần tử khác */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Tạo bóng */
+}
+
+/* Khi search-container được kích hoạt */
+.search-container.active .search-input {
+    display: block; /* Hiển thị khi click */
+}
+
+/* Định dạng cho icon đăng nhập và giỏ hàng */
+.custom-navbar-cta li a {
+    color: #fff; /* Màu mặc định của icon */
+    font-size: 18px;
+    transition: color 0.3s ease; /* Chỉ có hiệu ứng chuyển màu */
+}
+
+/* Thêm màu sắc đặc biệt cho mỗi icon */
+.custom-navbar-cta li a i {
+    color: #fff; /* Màu icon mặc định */
+}
+
+/* Thay đổi màu của các icon khi hover */
+.custom-navbar-cta li a i.fa-user {
+    color: #fff; /* Màu trắng cho icon login */
+}
+
+.custom-navbar-cta li a i.fa-cart-shopping {
+    color: #fff; /* Màu trắng cho icon giỏ hàng */
+}
+
+/* Bỏ hiệu ứng hover, chỉ đơn giản là màu trắng */
+.custom-navbar-cta li a i:hover {
+    color: #fff; /* Giữ màu trắng khi hover */
+}
+
+/* ĐỘ TƯƠNG THÍCH MOBILE */
+@media (max-width: 768px) {
+    .custom-navbar {
+        flex-direction: column;
+    }
+
+    .menu-right {
+        flex-direction: column;
+        width: 100%;
+        align-items: flex-start;
+    }
+
+    .custom-navbar-nav {
+        justify-content: flex-start;
+        margin-top: 10px;
+    }
+}

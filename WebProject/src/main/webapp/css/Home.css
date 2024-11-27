@@ -1,0 +1,386 @@
+@charset "UTF-8";
+/* Phần hero */
+.hero {
+    background-image: url('https://twigastationers.com/wp-content/uploads/home-stationery1.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+}
+
+.container_title {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 100px; 
+    /*display: flex;*/
+  /* justify-content: space-between;*/
+}
+
+.hero .intro-excerpt {
+    color: rgb(0, 0, 0);
+    text-align: left;
+    max-width: 600px;
+    margin: 0 20px;
+}
+
+.hero h1 {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.hero .btn {
+    margin-right: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+.hero .btn-secondary {
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    text-decoration: none;
+}
+
+.hero .btn-white-outline {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    border-radius: 25px;
+    text-decoration: none;
+}
+
+.row.align-items-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 30px;
+    padding-top: 100px;
+    padding-left: 70px;
+    width: 90%;
+}
+
+/* Sản phẩm */
+.product-img-wrapper {
+    position: relative;
+    overflow: visible;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 8px;
+}
+
+.product-item:hover .product-img-wrapper {
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease-in-out;
+}
+
+.row.align-items-center .product-thumbnail {
+    transition: transform 0.3s ease-in-out;
+}
+
+.row.align-items-center .product-icon {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    color: #f15a29;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.row.align-items-center .product-item:hover .product-thumbnail {
+    transform: translateY(-10px);
+}
+
+.row.align-items-center .product-item:hover .product-icon {
+    bottom: -50px;
+    opacity: 1;
+}
+
+.product-item {
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.product-title, .product-price {
+    margin: 5px 0;
+    color: #333;
+}
+
+/* Phần why-choose-section */
+.why-choose-section {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+    width: 90%;
+    padding-left: 90px;
+}
+
+.section-title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.why-choose-section p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.8;
+}
+
+.why-choose-section .feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.why-choose-section .feature .icon {
+    font-size: 36px;
+    color: #f15a29;
+    margin-bottom: 15px;
+}
+
+.why-choose-section .feature h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.why-choose-section .feature p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+}
+
+.why-choose-section .img-wrap img {
+    border-radius: 10px;
+    max-width: 100%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 992px) {
+    .why-choose-section .row {
+        display: flex;
+        align-items: center;
+    }
+
+    .why-choose-section .col-lg-6 {
+        order: 1;
+    }
+
+    .why-choose-section .col-lg-5 {
+        order: 2;
+    }
+}
+
+@media (max-width: 991px) {
+    .why-choose-section .row {
+        flex-direction: column;
+    }
+
+    .why-choose-section .col-lg-5 {
+        margin-top: 20px;
+    }
+}
+
+/* Popular products */
+.popular-product {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+    width: 90%;
+    padding-left: 90px;
+}
+
+.popular-product .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.popular-product .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.popular-product .col-12.col-md-6.col-lg-4 {
+    width: 100%;
+    max-width: calc(33.33% - 20px);
+    margin-bottom: 30px;
+}
+
+.popular-product .product-item-sm {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.popular-product .product-item-sm:hover {
+    transform: translateY(-10px);
+}
+
+.popular-product .product-item-sm .thumbnail {
+    overflow: hidden;
+    position: relative;
+}
+
+.popular-product .product-item-sm img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.popular-product .product-item-sm:hover img {
+    transform: scale(1.1);
+}
+
+.popular-product .product-item-sm .pt-3 {
+    padding: 20px;
+}
+
+.popular-product .product-item-sm h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.popular-product .product-item-sm p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+}
+
+.popular-product .product-item-sm a {
+    font-size: 14px;
+    color: #f15a29;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.popular-product .product-item-sm a:hover {
+    color: #333;
+}
+
+@media (max-width: 767px) {
+    .popular-product .col-12 {
+        margin-bottom: 20px;
+        width: 100%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .popular-product .col-12.col-md-6.col-lg-4 {
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (min-width: 992px) {
+    .popular-product .col-12.col-md-6.col-lg-4 {
+        max-width: calc(33.33% - 20px);
+    }
+}
+
+/* Testimonials Section */
+.testimonial-section {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.testimonial-title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.testimonial-slider-container {
+    overflow: hidden; /* Ẩn phần tràn */
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.testimonial-slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Hiệu ứng trượt */
+}
+
+.testimonial-item {
+    min-width: 100%; /* Hiển thị một testimonial tại một thời điểm */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.testimonial-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    overflow: hidden;
+    border: 2px solid #f15a29;
+}
+
+.testimonial-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.testimonial-quote {
+    font-size: 16px;
+    font-style: italic;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.testimonial-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.testimonial-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.testimonial-dots .dot {
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background-color: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.testimonial-dots .dot.active {
+    background-color: #f15a29; /* Màu chấm đang được chọn */
+}
+
