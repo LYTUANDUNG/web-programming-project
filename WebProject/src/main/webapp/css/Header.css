@@ -70,6 +70,7 @@ body{
     display: flex;
     align-items: center;
     gap: 120px; /* Tạo khoảng cách giữa các phần tử */
+    justify-content: center;
 }
 
 /* ĐỊNH DẠNG CHO ICON VÀ Ô TÌM KIẾM */
@@ -77,6 +78,7 @@ body{
     display: flex;
     gap: 15px;
     list-style: none;
+    margin:0px;
 }
 
 /* ĐỊNH DẠNG CHO ICON VÀ Ô TÌM KIẾM */
