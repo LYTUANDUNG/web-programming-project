@@ -1,0 +1,152 @@
+@charset "UTF-8";
+/* Hero section */
+.hero {
+    background-image: url('https://emilypost.com/client_media/images/thank-you-note-faqs.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0; /* Add padding for content space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px; /* Height of hero section */
+}
+
+.container_title {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Text styling */
+.hero h1 {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+/* Button styles */
+.hero .btn {
+    margin-right: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+.hero .btn-secondary {
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    border-radius: 25px;
+}
+
+.hero .btn-white-outline {
+    background-color: transparent;
+    text-decoration: none;
+    border: 2px solid white;
+    color: white;
+    border-radius: 25px;
+}
+
+/* General page styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+.hero {
+    background-color: #343a40;
+    color: white;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.container_title h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.container_title p {
+    font-size: 1.25em;
+    margin-bottom: 20px;
+}
+
+/* Thank you section */
+.thankyou-section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.thankyou-icon {
+    font-size: 4em;
+    margin-bottom: 20px;
+}
+
+.thankyou-title {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.btn-outline-black {
+    border: 2px solid black;
+    color: black;
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: transparent;
+    border-radius: 5px;
+}
+
+.btn-sm {
+    font-size: 1em;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 30px 0;
+    }
+    
+    .container_title h1 {
+        font-size: 2em;
+    }
+
+    .container_title p {
+        font-size: 1em;
+    }
+}
+/* Nút Quay lại cửa hàng */
+.btn-outline-black {
+    border: 2px solid #000;
+    color: #000;
+    background-color: transparent;
+    padding: 12px 24px;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 30px; /* Đổi kiểu bo tròn cho nút */
+    transition: all 0.3s ease-in-out; /* Thêm hiệu ứng chuyển động */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Thêm bóng đổ nhẹ cho nút */
+    margin-top: 20px; /* Thêm khoảng cách phía trên */
+}
+
+/* Hiệu ứng hover */
+.btn-outline-black:hover {
+    background-color: #000;
+    color: #fff;
+    transform: scale(1.05); /* Hiệu ứng phóng to khi di chuột vào */
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2); /* Tăng độ bóng đổ khi hover */
+}
+
+/* Hiệu ứng focus */
+.btn-outline-black:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.3); /* Thêm viền khi focus */
+}
