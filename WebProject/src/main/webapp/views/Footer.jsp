@@ -23,12 +23,6 @@
 <body>
 	<footer class="footer-section">
 		<div class="container relative">
-
-			<div class="sofa-img">
-				<img src="https://iof8.com/wp-content/uploads/2024/06/sofa-1.png"
-					alt="Image" class="img-fluid">
-			</div>
-
 			<div class="row">
 				<div class="col-lg-8">
 					<div class="subscription-form">

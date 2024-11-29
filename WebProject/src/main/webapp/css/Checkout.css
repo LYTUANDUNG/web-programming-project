@@ -1,0 +1,500 @@
+/* Phần hero */
+.hero {
+    background-image: url('https://twigastationers.com/wp-content/uploads/home-stationery1.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+}
+
+.container_title {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.hero .intro-excerpt {
+    color: rgb(0, 0, 0);
+    text-align: left;
+    max-width: 600px;
+    margin: 0 20px;
+}
+
+.hero h1 {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.hero .btn {
+    margin-right: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+.hero .btn-secondary {
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    text-decoration: none;
+}
+
+.hero .btn-white-outline {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    border-radius: 25px;
+    text-decoration: none;
+}
+
+.row.align-items-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 30px;
+    padding-top: 100px;
+    padding-left: 70px;
+    width: 90%;
+}
+
+/* Phần tổng quát */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Phần tiêu đề */
+.container_title h1 {
+    font-size: 36px;
+    color: #333;
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Form Billing Details */
+.p-lg-5 {
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+/* Cải thiện các ô nhập liệu */
+.form-control {
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    /* Đảm bảo các phần tử không bị tràn ra ngoài */
+    margin-bottom: 15px;
+    /* Thêm khoảng cách giữa các trường nhập liệu */
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Thêm hiệu ứng thu gọn và mở rộng cho các phương thức thanh toán */
+.payment-method {
+    display: none;
+    /* Ẩn các phương thức thanh toán mặc định */
+    padding: 15px;
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    margin-top: 15px;
+    border-radius: 4px;
+}
+
+/* Khi phần Payment được mở rộng */
+.payment-method.active {
+    display: block;
+}
+
+/* Style cho các checkbox chọn phương thức thanh toán */
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+.payment-option {
+    margin-bottom: 10px;
+}
+
+/* Cải thiện phần form để đảm bảo các text đều đặn */
+.row {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.col-md-6 {
+    flex: 0 0 48%;
+}
+
+.col-md-12 {
+    flex: 0 0 100%;
+}
+
+/* Responsive cho các màn hình nhỏ */
+@media (max-width: 768px) {
+    .col-md-6 {
+        flex: 0 0 100%;
+    }
+}
+
+/* Thêm icon cho phương thức thanh toán */
+.bi {
+    margin-right: 10px;
+}
+
+/* Phần border để tách các phương thức thanh toán */
+.border {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    background-color: #f9f9f9;
+}
+
+/* Thêm khoảng cách giữa các phần tử */
+.p-3 {
+    padding: 20px;
+}
+
+/* Cải tiến hiệu ứng collapse */
+.collapse {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Cải tiến các heading (h3) */
+h3.h6 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Style cho icon */
+.bi {
+    color: #007bff;
+    font-size: 20px;
+}
+
+/* Thêm kiểu dáng khi mở các phần collapse */
+.collapse.show {
+    display: block;
+    background-color: #fafafa;
+    border-top: 2px solid #ddd;
+    padding-top: 10px;
+    border-radius: 0 0 5px 5px;
+}
+
+.py-2 {
+    padding: 10px;
+}
+
+/* Đảm bảo có khoảng cách cho văn bản */
+.mb-0 {
+    margin-bottom: 0;
+    font-size: 16px;
+    color: #555;
+}
+
+/* Thêm hiệu ứng hover cho mỗi phương thức thanh toán */
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+a:hover {
+    color: #007bff;
+}
+
+.payment-method-form {
+    display: none;
+    margin-top: 20px;
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.payment-method-form h5 {
+    margin-bottom: 15px;
+}
+
+.form-control {
+    margin-bottom: 10px;
+}
+
+.btn {
+    width: 100%;
+    margin-top: 15px;
+}
+
+.confirmation-step {
+    display: none;
+    margin-top: 20px;
+    background-color: #e9ecef;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.confirmation-step h5 {
+    margin-bottom: 15px;
+}
+
+.confirmation-step button {
+    width: 100%;
+}
+
+
+/* Ẩn phần tử mặc định */
+.toggle-content {
+    display: none;
+}
+
+/* Khi checkbox được tích, sẽ hiển thị phần tử */
+input[type="checkbox"]:checked+.toggle-content {
+    display: block;
+}
+/* Thêm CSS cho phần form để tối ưu */
+input[type="text"], input[type="email"], input[type="number"] {
+    background-color: #f8f9fa;
+    border: 1px solid #ccc;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="number"]:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+textarea {
+    background-color: #f8f9fa;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+/* Phần Coupon Code */
+.couponcode-wrap {
+    /*display: flex;*/
+    align-items: center;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+#c_code {
+    flex-grow: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.btn-black {
+    background-color: #000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.btn-black:hover {
+    background-color: #333;
+}
+
+/* Phần Bảng Đơn Hàng */
+.site-block-order-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.site-block-order-table th,
+.site-block-order-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.site-block-order-table th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+}
+
+.site-block-order-table td {
+    font-size: 16px;
+}
+
+.site-block-order-table .text-black {
+    color: #000;
+}
+
+.site-block-order-table .font-weight-bold {
+    font-weight: bold;
+}
+
+/* Phần Payment Methods */
+.payment-methods {
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    margin-top: 30px;
+}
+
+.payment-methods h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.payment-option {
+    margin-bottom: 20px;
+}
+
+.payment-option input[type="radio"] {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.payment-option label {
+    font-size: 18px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.payment-option input[type="radio"]:checked + label {
+    color: #007bff;
+}
+
+.payment-option .payment-info {
+    margin-top: 10px;
+    display: none;
+    transition: max-height 0.3s ease;
+}
+
+.payment-option.active .payment-info {
+    display: block;
+}
+
+.payment-option input[type="text"], 
+.payment-option input[type="email"], 
+.payment-option input[type="month"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 5px;
+    transition: border-color 0.3s ease;
+}
+
+.payment-option input[type="text"]:focus, 
+.payment-option input[type="email"]:focus, 
+.payment-option input[type="month"]:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.payment-methods button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 18px;
+    border-radius: 5px;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.payment-methods button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* CSS cho nút Proceed to Payment */
+#payment-form button[type="submit"] {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+#payment-form button[type="submit"]:hover {
+    background-color: #000000;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .couponcode-wrap {
+        flex-direction: column;
+    }
+
+    .couponcode-wrap input,
+    .couponcode-wrap .btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .site-block-order-table td,
+    .site-block-order-table th {
+        font-size: 14px;
+    }
+
+    .payment-methods {
+        padding: 15px;
+    }
+
+    .payment-methods h3 {
+        font-size: 20px;
+    }
+
+    .payment-option label {
+        font-size: 16px;
+    }
+
+    .payment-option input[type="text"], 
+    .payment-option input[type="email"], 
+    .payment-option input[type="month"] {
+        font-size: 14px;
+    }
+
+    .payment-methods button[type="submit"] {
+        font-size: 16px;
+    }
+}
