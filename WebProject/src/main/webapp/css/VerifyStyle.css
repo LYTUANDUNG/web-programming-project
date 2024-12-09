@@ -5,8 +5,33 @@
 	height: 524px;
 	padding: 32px;
 	background-color: #FFFFFF;
-	border-radius: 10px; /* Tạo góc bo tròn nếu cần */
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bóng nhẹ */
+	border-radius: 10px;  
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+.inputBox {
+    width: 396px;  
+    height: 48px;  
+    padding: 0 12px;  
+    border-radius: 10px;  
+    border: 1px solid #ccc; 
+    box-sizing: border-box; 
+}
+
+.btnVerify {
+    width: 396px;  
+    height: 48px; 
+    background: #3B5D50;
+    cursor: pointer;
+    color: #fff;
+    letter-spacing: 1px;
+    border-radius: 10px;  
+    border: none; 
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.btnVerify:hover {
+    background: #F8B810;
+    transform: scale(1.05);
 }
 
 
@@ -36,32 +61,14 @@ body {
 #headingContainer {
 	padding: 12px 12px 0px;
 }
-
-.inputBox {
-	width: 100%;
-	padding:12px;
-	border-radius: 10px;
-}
+ 
 
 .paddingT12px {
 	padding-top: 12px;
 }
 
-.btnVerify {
-	width: 396px;
-	height: 48px;
-	background: #3B5D50;
-	cursor: pointer;
-	color: #fff;
-	letter-spacing: 1px;
-	border-radius: 10px;
-	transition: background 0.3s ease, transform 0.3s ease;
-}
-
-.btnVerify:hover {
-	background: #F8B810;
-	transform: scale(1.05);
-}
+ 
+ 
 
 #wrapper {
 	display: flex;
