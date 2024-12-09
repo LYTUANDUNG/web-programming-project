@@ -59,7 +59,7 @@ body {
 }
 
 #headingContainer {
-	padding: 12px 12px 0px;
+	padding: 12px ;
 }
  
 
@@ -67,8 +67,6 @@ body {
 	padding-top: 12px;
 }
 
- 
- 
 
 #wrapper {
 	display: flex;

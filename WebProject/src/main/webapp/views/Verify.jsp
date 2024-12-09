@@ -16,7 +16,7 @@
 	crossorigin="anonymous">
 
 <meta charset="UTF-8">
-<title>Veryfy Page</title>
+<title>Verify Page</title>
 </head>
 <body>
 	<div id="headingContainer">
