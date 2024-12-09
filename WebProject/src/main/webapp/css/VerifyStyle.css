@@ -1,0 +1,72 @@
+@charset "UTF-8";
+
+#containerVerifyBody {
+	width: 460px;
+	height: 524px;
+	padding: 32px;
+	background-color: #FFFFFF;
+	border-radius: 10px; /* Tạo góc bo tròn nếu cần */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bóng nhẹ */
+}
+
+
+.underlineWord {
+	text-decoration: underline;
+}
+
+#HeadingAndLink {
+	display: flex;
+	justify-content: space-between;
+	border-radius: 10px;
+}
+
+.text_hover:hover {
+	cursor: pointer;
+	color: #F8B810;
+}
+
+body {
+	background-color: #F9FAFF;
+}
+
+#textLogo {
+	color: #3B5D50;
+}
+
+#headingContainer {
+	padding: 12px 12px 0px;
+}
+
+.inputBox {
+	width: 100%;
+	padding:12px;
+	border-radius: 10px;
+}
+
+.paddingT12px {
+	padding-top: 12px;
+}
+
+.btnVerify {
+	width: 396px;
+	height: 48px;
+	background: #3B5D50;
+	cursor: pointer;
+	color: #fff;
+	letter-spacing: 1px;
+	border-radius: 10px;
+	transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.btnVerify:hover {
+	background: #F8B810;
+	transform: scale(1.05);
+}
+
+#wrapper {
+	display: flex;
+	justify-content:center;
+	align-items: center;
+	 height: 100vh; 
+	 background-color: #F9FAFF;
+}
