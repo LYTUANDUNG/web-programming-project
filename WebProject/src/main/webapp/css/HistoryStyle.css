@@ -1,0 +1,156 @@
+body {
+	background-color: #f6f6f6;
+	font-family: 'Arial', sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+.header {
+	padding: 20px;
+	background-color: #3B5D50;
+	color: white;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header h3 {
+	margin: 0;
+}
+
+.header a {
+	color: white;
+	text-decoration: none;
+	padding: 10px 20px;
+	margin-left: 10px;
+	background-color: black;
+	border-radius: 5px;
+	transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.header a:hover {
+	background-color: #F8B810;
+	color: black;
+}
+
+.container {
+	margin-top: 40px;
+}
+
+.transaction {
+	background-color: white;
+	padding: 20px;
+	margin: 20px 0;
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+	border-radius: 8px;
+}
+
+.transaction-header {
+	display: flex;
+	justify-content: space-between;
+	font-size: 16px;
+	margin-bottom: 15px;
+	cursor: pointer;
+}
+
+.transaction-header span {
+	font-weight: bold;
+	color: #333;
+}
+
+.transaction-details {
+	font-size: 14px;
+	color: #555;
+	margin-bottom: 10px;
+}
+
+.items-list {
+	max-height: 0;
+	overflow: hidden;
+	opacity: 0;
+	transform: translateY(-10px);
+	transition: all 0.5s ease-in-out;
+}
+
+.items-list.show {
+	max-height: 500px;
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.item {
+	display: flex;
+	justify-content:space-around;
+	align-items: center;
+	gap: 10px;
+	width: 100%;
+}
+
+.item:last-child {
+	border-bottom: none;
+}
+
+.item-name {
+	font-weight: bold;
+	color: #4b8c7e;
+}
+
+.item-price, .item-quantity {
+	font-size: 14px;
+	color: #555;
+}
+
+
+/* Đường kẻ ngang giữa Status và nút */
+.divider-line {
+	border: none;
+	height: 1px;
+	background-color: #ddd;
+	margin: 10px 0;
+}
+
+/* Nút mũi tên xuống */
+.placeholder-arrow {
+	text-align: center;
+	margin-top: 10px;
+	font-size: 16px;
+	color: #888;
+	cursor: pointer;
+	transition: color 0.3s ease;
+}
+
+.placeholder-arrow:hover {
+	color: #555; /* Đổi màu khi hover */
+}
+
+/* User Info Styling */
+.user-info {
+	background-color: #f8f9fa;
+	border-radius: 8px;
+	padding: 15px;
+	margin-bottom: 20px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.user-info p {
+	font-size: 1.2rem;
+	margin: 10px 0;
+}
+
+.user-id {
+	font-weight: bold;
+	font-size: 1.5rem;
+}
+
+.user-name {
+	font-weight: bold;
+	font-size: 1.3rem;
+	color: #343a40;
+}
+.detail{
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	width: 325px;
+	height: 42px;
+}
