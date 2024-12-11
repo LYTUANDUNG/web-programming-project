@@ -441,3 +441,48 @@ insert into ManagerCategories values(1,2),
 select * from dbAdmin
 select * from ManagerCategories
 select * from Categories
+-- Tạo bảng Account
+CREATE TABLE Account (
+    AccountID INT IDENTITY(1,1) PRIMARY KEY, -- Khóa chính
+    Name NVARCHAR(100) NOT NULL,            -- Tên người dùng
+    Password NVARCHAR(255) NOT NULL,        -- Mật khẩu
+    Email NVARCHAR(255) NOT NULL UNIQUE     -- Email duy nhất
+);
+
+-- Tạo bảng ManagerUser
+CREATE TABLE ManagerUser (
+    ManagerID INT IDENTITY(1,1) PRIMARY KEY, -- Khóa chính
+    AccountID INT NOT NULL,                  -- Liên kết tới Account
+    Role NVARCHAR(50) NOT NULL,             -- Vai trò của quản lý
+    FOREIGN KEY (AccountID) REFERENCES Account(AccountID)
+);
+
+-- Tạo bảng History
+CREATE TABLE History (
+    HistoryID INT IDENTITY(1,1) PRIMARY KEY, -- Khóa chính
+    OrderID INT NOT NULL,                    -- ID đơn hàng
+    AccountID INT NOT NULL,                  -- Liên kết tới Account
+    Timestamp DATETIME DEFAULT GETDATE(),    -- Thời gian ghi nhận lịch sử
+    FOREIGN KEY (AccountID) REFERENCES Account(AccountID)
+);
+-- Thêm dữ liệu mẫu vào bảng Account
+INSERT INTO Account (Name, Password, Email) 
+VALUES 
+    ('Alice', 'password123', 'alice@example.com'),
+    ('Bob', 'securepass', 'bob@example.com'),
+    ('Charlie', 'charliepwd', 'charlie@example.com'),
+    ('David', 'davidpass', 'david@example.com');
+
+-- Thêm dữ liệu mẫu vào bảng ManagerUser
+INSERT INTO ManagerUser (AccountID, Role) 
+VALUES 
+    (1, 'Admin'),
+    (2, 'Moderator');
+
+-- Thêm dữ liệu mẫu vào bảng History
+INSERT INTO History (OrderID, AccountID, Timestamp) 
+VALUES 
+    (101, 1, '2024-12-01 10:00:00'),
+    (102, 2, '2024-12-02 14:30:00'),
+    (103, 1, '2024-12-03 18:45:00'),
+    (104, 3, '2024-12-04 08:15:00');
