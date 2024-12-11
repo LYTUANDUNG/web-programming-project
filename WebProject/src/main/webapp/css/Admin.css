@@ -1,0 +1,147 @@
+body {
+	font-family: Arial, sans-serif;
+	background-color: #f9f9f9;
+	margin: 0;
+	padding: 0;
+}
+/* Header Styling */
+.admin-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #343a40;
+	padding: 10px 20px;
+	color: #fff;
+	position: sticky;
+	top: 0;
+	z-index: 1000;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.admin-header .logo h1 {
+	margin: 0;
+	font-size: 1.5em;
+}
+
+.admin-header nav {
+	display: flex;
+	align-items: center;
+}
+
+.admin-header .nav-links {
+	list-style: none;
+	display: flex;
+	margin: 0;
+	padding: 0;
+}
+
+.admin-header .nav-links li {
+	position: relative;
+	margin: 0 15px;
+}
+
+.admin-header .nav-links a {
+	text-decoration: none;
+	color: #fff;
+	font-size: 1em;
+	transition: color 0.3s ease;
+}
+
+.admin-header .nav-links a:hover {
+	color: #007bff;
+}
+
+/* Dropdown Menu */
+.admin-header .nav-links .dropdown {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	background-color: #343a40;
+	list-style: none;
+	padding: 10px 0;
+	display: none;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.admin-header .nav-links li:hover .dropdown {
+	display: block;
+}
+
+.admin-header .nav-links .dropdown li {
+	margin: 0;
+	padding: 0;
+}
+
+.admin-header .nav-links .dropdown a {
+	padding: 10px 20px;
+	display: block;
+	text-decoration: none;
+	color: #fff;
+	transition: background-color 0.3s ease;
+}
+
+.admin-header .nav-links .dropdown a:hover {
+	background-color: #495057;
+}
+
+.container {
+	width: 80%;
+	margin: 20px auto;
+	background: #fff;
+	border-radius: 5px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+	padding: 20px;
+}
+
+h1 {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.collapsible-header {
+	padding: 15px;
+	font-size: 18px;
+	background: #f4f4f4;
+	cursor: pointer;
+	border: 1px solid #ddd;
+	margin: 5px 0;
+}
+
+.collapsible-header.active {
+	background: #ddd;
+}
+
+.collapsible-content {
+	padding: 15px;
+	display: none;
+	background: #fff;
+	border: 1px solid #ddd;
+	border-top: none;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+table, th, td {
+	border: 1px solid #ddd;
+}
+
+th, td {
+	padding: 10px;
+	text-align: left;
+}
+
+button {
+	background: #007bff;
+	color: #fff;
+	padding: 5px 10px;
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+button:hover {
+	background: #0056b3;
+}
