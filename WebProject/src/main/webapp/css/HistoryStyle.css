@@ -86,9 +86,6 @@ body {
 	width: 100%;
 }
 
-.item:last-child {
-	border-bottom: none;
-}
 
 .item-name {
 	font-weight: bold;
@@ -153,4 +150,65 @@ body {
 	justify-content:center;
 	width: 325px;
 	height: 42px;
+}
+/*button css*/
+.btn {
+    width: 150px !important;
+    height: 48px !important;
+    background: #3B5D50 !important;
+    cursor: pointer !important;
+    color: #fff !important;
+    letter-spacing: 1px !important;
+    border-radius: 10px !important;
+    border: 1px !important;
+    transition: background 0.3s ease, transform 0.3s ease !important;
+    font-size: 16px !important;
+}
+
+.btn:hover {
+    background: #F8B810 !important;
+    transform: scale(1.05) !important;
+}
+/* Style cho alert */
+/* Style cho alert */
+.alert {
+    padding: 15px;
+    position: fixed;
+    bottom: 20px;  /* Bắt đầu từ dưới màn hình */
+    right: 20px;   /* Đảm bảo alert ở góc phải */
+    border-radius: 10px;
+    color: black;  /* Chữ màu đen */
+    font-size: 16px;
+    width: 300px;
+    z-index: 9999;  /* Đảm bảo alert luôn xuất hiện trên cùng */
+    background-color: #FFD700; /* Màu vàng */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: slideUp 1s ease-out; /* Thêm hiệu ứng trôi từ dưới lên */
+}
+
+/* Nút đóng alert */
+.closebtn {
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+.closebtn:hover {
+    color: #555;
+}
+
+/* Hiệu ứng trôi từ dưới lên */
+@keyframes slideUp {
+    0% {
+        bottom: -100px;  /* Bắt đầu từ dưới màn hình */
+        opacity: 0;
+    }
+    100% {
+        bottom: 20px;  /* Dừng ở vị trí mong muốn */
+        opacity: 1;
+    }
 }
