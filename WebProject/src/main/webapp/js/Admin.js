@@ -1,5 +1,3 @@
-
-// Hàm xác nhận khi đăng xuất
 function confirmLogout() {
 	if (confirm('Are you sure you want to logout?')) {
 		// Redirect to logout page
@@ -7,9 +5,10 @@ function confirmLogout() {
 	}
 }
 
-// Quản lý sự kiện click để hiển thị phần nội dung tương ứng khi chọn từ menu
 document.addEventListener("DOMContentLoaded", () => {
+	// Quản lý sự kiện click để hiển thị phần nội dung tương ứng khi chọn từ menu
 	const collapsibleHeaders = document.querySelectorAll('.collapsible-header');
+
 	collapsibleHeaders.forEach(header => {
 		header.addEventListener('click', () => {
 			const content = header.nextElementSibling;
@@ -19,29 +18,68 @@ document.addEventListener("DOMContentLoaded", () => {
 		});
 	});
 
-	// Quản lý menu dropdown
+	// Đảm bảo menu dropdown hoạt động khi di chuột vào
 	const navLinks = document.querySelectorAll(".nav-links li");
+
 	navLinks.forEach(link => {
 		link.addEventListener("mouseover", () => {
 			const dropdown = link.querySelector(".dropdown");
-			if (dropdown) dropdown.style.display = "block";
+			if (dropdown) {
+				dropdown.style.display = "block";
+			}
 		});
 
 		link.addEventListener("mouseout", () => {
 			const dropdown = link.querySelector(".dropdown");
-			if (dropdown) dropdown.style.display = "none";
+			if (dropdown) {
+				dropdown.style.display = "none";
+			}
 		});
 	});
 });
 
-// Hàm hiển thị form trong modal
-function showForm(formType, user = null) {
-	$('#formModalLabel').text(formType.charAt(0).toUpperCase() + formType.slice(1));
-	resetForm(formType);  // Reset form mỗi khi mở modal
+// Hàm hiển thị phần tương ứng (category, user, product, etc.)
+function showSection(sectionId) {
+	$('.section').addClass('hidden');
+	$('#' + sectionId).removeClass('hidden');
+}
 
-	let formHtml = '';
-	if (formType === 'addUser') {
-		formHtml = `
+// Hàm để hiển thị form trong modal (Thêm, Sửa)
+function showForm(formType) {
+	$('#formModalLabel').text(formType.charAt(0).toUpperCase() + formType.slice(1));
+
+	// Reset form mỗi khi mở modal
+	resetForm(formType);
+
+	// Tùy theo loại form, ẩn hoặc hiện các phần tử
+	if (formType === 'addCategory') {
+		$('#formModal .modal-body').html(`
+            <form id="categoryForm">
+                <div class="mb-3">
+                    <label for="categoryName" class="form-label">Category Name</label>
+                    <input type="text" class="form-control" id="categoryName" required>
+                </div>
+                <div class="mb-3">
+                    <label for="categoryDesc" class="form-label">Description</label>
+                    <textarea class="form-control" id="categoryDesc" required></textarea>
+                </div>
+            </form>
+        `);
+	} else if (formType === 'editCategory') {
+		$('#formModal .modal-body').html(`
+            <form id="categoryForm">
+                <div class="mb-3">
+                    <label for="categoryName" class="form-label">Category Name</label>
+                    <input type="text" class="form-control" id="categoryName" value="Books" required>
+                </div>
+                <div class="mb-3">
+                    <label for="categoryDesc" class="form-label">Description</label>
+                    <textarea class="form-control" id="categoryDesc" required>All kinds of books</textarea>
+                </div>
+            </form>
+        `);
+	} else if (formType === 'addUser') {
+		$('#formModal .modal-body').html(`
             <form id="userForm">
                 <div class="mb-3">
                     <label for="username" class="form-label">Username</label>
@@ -51,91 +89,63 @@ function showForm(formType, user = null) {
                     <label for="email" class="form-label">Email</label>
                     <input type="email" class="form-control" id="email" required>
                 </div>
-                <div class="mb-3">
-                    <label for="role" class="form-label">Role</label>
-                    <select class="form-select" id="role" required>
-                        <option value="Admin">Admin</option>
-                        <option value="Customer">Customer</option>
-                    </select>
-                </div>
             </form>
-        `;
-	} else if (formType === 'editUser' && user) {
-		formHtml = `
+        `);
+	} else if (formType === 'editUser') {
+		$('#formModal .modal-body').html(`
             <form id="userForm">
                 <div class="mb-3">
                     <label for="username" class="form-label">Username</label>
-                    <input type="text" class="form-control" id="username" value="${user.username}" required>
+                    <input type="text" class="form-control" id="username" value="admin" required>
                 </div>
                 <div class="mb-3">
                     <label for="email" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="email" value="${user.email}" required>
-                </div>
-                <div class="mb-3">
-                    <label for="role" class="form-label">Role</label>
-                    <select class="form-select" id="role" required>
-                        <option value="Admin" ${user.role === 'Admin' ? 'selected' : ''}>Admin</option>
-                        <option value="Customer" ${user.role === 'Customer' ? 'selected' : ''}>Customer</option>
-                    </select>
+                    <input type="email" class="form-control" id="email" value="admin@example.com" required>
                 </div>
             </form>
-        `;
+        `);
+	} else if (formType === 'addProduct') {
+		$('#formModal .modal-body').html(`
+            <form id="productForm">
+                <div class="mb-3">
+                    <label for="productName" class="form-label">Product Name</label>
+                    <input type="text" class="form-control" id="productName" required>
+                </div>
+                <div class="mb-3">
+                    <label for="productPrice" class="form-label">Price</label>
+                    <input type="number" class="form-control" id="productPrice" required>
+                </div>
+            </form>
+        `);
+	} else if (formType === 'editProduct') {
+		$('#formModal .modal-body').html(`
+            <form id="productForm">
+                <div class="mb-3">
+                    <label for="productName" class="form-label">Product Name</label>
+                    <input type="text" class="form-control" id="productName" value="Notebook" required>
+                </div>
+                <div class="mb-3">
+                    <label for="productPrice" class="form-label">Price</label>
+                    <input type="number" class="form-control" id="productPrice" value="10" required>
+                </div>
+            </form>
+        `);
 	}
-
-	$('#formModal .modal-body').html(formHtml);
 	$('#formModal').modal('show');
-
-	// Xử lý hành động "Save"
-	$('#formModal .btn-primary').off('click').on('click', function() {
-		const username = $('#username').val();
-		const email = $('#email').val();
-		const role = $('#role').val();
-
-		if (formType === 'addUser') {
-			// Thực hiện thêm người dùng mới
-			addUser(username, email, role);
-		} else if (formType === 'editUser') {
-			// Thực hiện chỉnh sửa người dùng
-			editUser(user.id, username, email, role);
-		}
-	});
 }
 
 // Hàm để reset form mỗi khi mở modal
 function resetForm(formType) {
-	if (formType === 'addUser' || formType === 'editUser') {
+	if (formType === 'addCategory' || formType === 'editCategory') {
+		$('#categoryName').val('');
+		$('#categoryDesc').val('');
+	} else if (formType === 'addUser' || formType === 'editUser') {
 		$('#username').val('');
 		$('#email').val('');
-		$('#role').val('Admin');
+	} else if (formType === 'addProduct' || formType === 'editProduct') {
+		$('#productName').val('');
+		$('#productPrice').val('');
 	}
-}
-
-// Hàm thêm người dùng
-function addUser(username, email, role) {
-	// Mã gửi dữ liệu đến server qua AJAX hoặc thực hiện hành động cần thiết
-	$.post('/addUser', { username: username, email: email, role: role })
-		.done(() => {
-			alert('User added successfully!');
-			$('#formModal').modal('hide');
-			location.reload();  // Tải lại trang để cập nhật danh sách người dùng
-		})
-		.fail(() => {
-			alert('Failed to add user!');
-		});
-}
-
-// Hàm chỉnh sửa người dùng
-function editUser(userId, username, email, role) {
-	// Mã gửi dữ liệu chỉnh sửa người dùng qua AJAX
-	$.post('/editUser', { userId: userId, username: username, email: email, role: role })
-		.done(() => {
-			alert('User updated successfully!');
-			$('#formModal').modal('hide');
-			location.reload();  // Tải lại trang để cập nhật danh sách người dùng
-		})
-		.fail(() => {
-			alert('Failed to update user!');
-		});
 }
 
 // Hàm tìm kiếm trong bảng
@@ -162,6 +172,11 @@ function searchTable(type) {
 	}
 }
 
+// Hàm để viết hoa chữ cái đầu trong tên
+function capitalizeFirstLetter(string) {
+	return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
 // Hàm xác nhận khi xóa
 function confirmDelete(type) {
 	if (confirm(`Are you sure you want to remove this ${type}?`)) {
@@ -169,20 +184,44 @@ function confirmDelete(type) {
 	}
 }
 
-// Hàm để thay đổi quyền người dùng
-function changeUserRole(username, newRole) {
-	if (confirm(`Are you sure you want to change the role of ${username} to ${newRole}?`)) {
-		// Make an AJAX call to the server to update the role
-		$.post('/updateRole', { username: username, role: newRole })
-			.done(() => alert('Role updated successfully!'))
-			.fail(() => alert('Failed to update role.'));
-	}
+// Các hàm liên quan đến đơn hàng
+// Change Order Status Function
+function changeOrderStatus(orderId, status) {
+	console.log("Order ID: " + orderId + " Status Changed to: " + status);
+	// Add code to update the order status in the backend (e.g., via AJAX request)
 }
 
-// Thêm tính năng phân trang sử dụng DataTable
+// View Order Details Function
+function viewOrderDetails(orderId) {
+	// Replace with code to fetch order details and display in modal
+	const orderDetails = `
+            <p><strong>Order ID:</strong> ${orderId}</p>
+            <p><strong>Product:</strong> Notebook</p>
+            <p><strong>Status:</strong> Processing</p>
+            <p><strong>Shipping Status:</strong> In Transit</p>
+            <p><strong>Tracking Number:</strong> 123456789</p>
+        `;
+	document.getElementById('orderDetails').innerHTML = orderDetails;
+	$('#viewOrderModal').modal('show');
+}
+
+// Cancel Order Function
+function cancelOrder(orderId) {
+	console.log("Order ID " + orderId + " is canceled.");
+	// Add code to cancel the order in the backend
+}
+
+function cancelOrder(orderId) {
+	if (confirm(`Are you sure you want to cancel order ${orderId}?`)) {
+		alert(`Order ${orderId} has been canceled.`);
+	}
+}
+// Thêm tính năng phân trang sử dụng plugin hoặc tự cài đặt
 $('#productsTable').DataTable({
 	paging: true,
 	searching: true,
 	ordering: true,
 	pageLength: 10
 });
+
+	

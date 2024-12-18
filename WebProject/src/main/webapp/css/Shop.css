@@ -123,21 +123,37 @@
     color: #333;
 }
 
-/* Responsive */
-@media (max-width: 1024px) {
-    .row.align-items-center .product-item {
-        width: calc(33.33% - 30px); /* 3 cột khi màn hình nhỏ hơn 1024px */
-    }
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
 }
 
-@media (max-width: 768px) {
-    .row.align-items-center .product-item {
-        width: calc(50% - 30px); /* 2 cột khi màn hình nhỏ hơn 768px */
-    }
+.search-input {
+    width: 60%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    font-size: 16px;
 }
 
-@media (max-width: 480px) {
-    .row.align-items-center .product-item {
-        width: 100%; /* 1 cột khi màn hình nhỏ hơn 480px */
-    }
+.search-button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
 }
+
+.search-button:hover {
+    background-color: #0056b3;
+}
+
+.search-input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+

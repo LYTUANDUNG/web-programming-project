@@ -1,63 +1,84 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="f" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<f:setBundle basename="lang.lang" var="bundle" scope="session" />
+<f:setLocale
+	value="${sessionScope.lang != null ? sessionScope.lang : 'en_US'}"
+	scope="session" />
 <!DOCTYPE html>
-<html lang="vi">
+<html
+	lang="${sessionScope.lang != null ? sessionScope.lang.split('_')[0] : 'en'}">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Header</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css"
-        integrity="sha512-9xKTRVabjVeZmc+GUW8GgSmcREDunMM+Dt/GrzchfN8tkwHizc5RP4Ok/MXFFy5rIjJjzhndFScTceq5e6GvVQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/Header.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title><f:message bundle="${bundle}" key="header.title" /></title>
+<!-- Font Awesome for Icons -->
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css"
+	integrity="sha512-9xKTRVabjVeZmc+GUW8GgSmcREDunMM+Dt/GrzchfN8tkwHizc5RP4Ok/MXFFy5rIjJjzhndFScTceq5e6GvVQ=="
+	crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!-- Link to your custom CSS -->
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/css/Header.css">
 </head>
 
 <body>
-    <nav class="custom-navbar">
-        <!-- CHỮ SHOP BÊN TRÁI -->
-        <div class="navbar-brand-container">
-            <a class="navbar-brand" href="home.jsp">Stationery</a>
-        </div>
+	<nav class="custom-navbar">
+		<!-- CHỮ SHOP BÊN TRÁI -->
+		<div class="navbar-brand-container">
+			<a class="navbar-brand" href="home.jsp"><f:message
+					bundle="${bundle}" key="header.brand" /></a>
+		</div>
 
-        <!-- MENU BÊN PHẢI -->
-        <div class="menu-right">
-            <!-- MENU CHÍNH -->
-            <ul class="custom-navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="home.jsp">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="shop.jsp">Shop</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="about.jsp">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="services.jsp">Services</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="blog.jsp">Blog</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contact.jsp">Contact</a>
-                </li>
-            </ul>
+		<!-- MENU BÊN PHẢI -->
+		<div class="menu-right">
+			<!-- MENU CHÍNH -->
+			<ul class="custom-navbar-nav">
+				<li class="nav-item"><a class="nav-link" href="Home.jsp"><f:message
+							bundle="${bundle}" key="header.home" /></a></li>
+				<li class="nav-item"><a class="nav-link" href="Shop.jsp"><f:message
+							bundle="${bundle}" key="header.shop" /></a></li>
+				<li class="nav-item"><a class="nav-link" href="Sale.jsp"><f:message
+							bundle="${bundle}" key="header.about" /></a></li>
+				<li class="nav-item"><a class="nav-link" href="services.jsp"><f:message
+							bundle="${bundle}" key="header.services" /></a></li>
+				<li class="nav-item"><a class="nav-link" href="blog.jsp"><f:message
+							bundle="${bundle}" key="header.blog" /></a></li>
+				<li class="nav-item"><a class="nav-link" href="contact.jsp"><f:message
+							bundle="${bundle}" key="header.contact" /></a></li>
+			</ul>
 
-            <!-- ICON -->
-            <ul class="custom-navbar-cta">
-                <li>
-                    <div class="search-container">
-                        <input type="text" class="search-input" placeholder="Search...">
-                        <i class="fa-solid fa-magnifying-glass search-icon"></i>
-                    </div>
-                </li>
-                <li><a class="nav-link" href="user.jsp"><i class="fa-solid fa-user"></i></a></li>
-                <li><a class="nav-link" href="cart.jsp"><i class="fa-solid fa-cart-shopping"></i></a></li>
-            </ul>
-        </div>
-    </nav>
+			<!-- CTA (Call to action) -->
+			<ul class="custom-navbar-cta">
+				<li class="nav-item"><f:message bundle="${bundle}"
+						key="header.welcome" /> , ${sessionScope.adminName}</li>
+				<li><a class="nav-link" href="user.jsp"><i
+						class="fa-solid fa-user"></i></a></li>
+				<li><a class="nav-link" href="cart.jsp"><i
+						class="fa-solid fa-cart-shopping"></i></a></li>
+				<li><a class="nav-link" href="wishlist.jsp"><i
+						class="fa-solid fa-heart"></i></a></li>
 
-    <script src="${pageContext.request.contextPath}/js/Header.js"></script>
+				<!-- Language Dropdown -->
+				<li class="dropdown"><a class="nav-link dropdown-toggle"
+					href="#" id="languageDropdown" role="button"
+					data-bs-toggle="dropdown" aria-expanded="false"> <i
+						class="fa-solid fa-globe"></i>
+				</a>
+					<ul class="dropdown-menu" aria-labelledby="languageDropdown">
+						<li><a class="dropdown-item" href="HeaderServlet?lang=vi_VN">Tiếng
+								Việt</a></li>
+						<li><a class="dropdown-item" href="HeaderServlet?lang=en_US">English</a></li>
+					</ul></li>
+			</ul>
+		</div>
+	</nav>
+
+	<!-- Link to custom JS -->
+	<script src="${pageContext.request.contextPath}/js/Header.js"></script>
 </body>
 
 </html>

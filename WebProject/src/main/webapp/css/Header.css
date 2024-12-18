@@ -101,24 +101,6 @@ body{
     transform: scale(1.2);
 }
 
-/* Định dạng ô tìm kiếm */
-.search-input {
-    position: absolute; /* Tách ô tìm kiếm ra khỏi luồng chính */
-    top: 50%; /* Căn giữa theo chiều dọc container */
-    left: -130px; /* Di chuyển ô tìm kiếm sang bên trái (200px chiều rộng + padding) */
-    transform: translateY(-50%); /* Căn giữa theo chiều cao */
-    display: none; /* Mặc định ẩn */
-    border: 1px solid #ccc;
-    padding: 5px 10px;
-    border-radius: 4px;
-    outline: none;
-    font-size: 14px;
-    width: 100px; /* Định kích thước */
-    background-color: #fff;
-    color: #000;
-    z-index: 1000; /* Hiển thị trên các phần tử khác */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Tạo bóng */
-}
 
 /* Khi search-container được kích hoạt */
 .search-container.active .search-input {
@@ -139,32 +121,68 @@ body{
 
 /* Thay đổi màu của các icon khi hover */
 .custom-navbar-cta li a i.fa-user {
-    color: #fff; /* Màu trắng cho icon login */
+    color: black; /* Màu trắng cho icon login */
 }
 
 .custom-navbar-cta li a i.fa-cart-shopping {
-    color: #fff; /* Màu trắng cho icon giỏ hàng */
+    color: black; /* Màu trắng cho icon giỏ hàng */
 }
 
 /* Bỏ hiệu ứng hover, chỉ đơn giản là màu trắng */
 .custom-navbar-cta li a i:hover {
-    color: #fff; /* Giữ màu trắng khi hover */
+    color: black; /* Giữ màu trắng khi hover */
 }
 
-/* ĐỘ TƯƠNG THÍCH MOBILE */
-@media (max-width: 768px) {
-    .custom-navbar {
-        flex-direction: column;
-    }
 
-    .menu-right {
-        flex-direction: column;
-        width: 100%;
-        align-items: flex-start;
-    }
+/* Định dạng chung cho dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
 
-    .custom-navbar-nav {
-        justify-content: flex-start;
-        margin-top: 10px;
-    }
+.dropdown-toggle {
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff; /* Nền sáng để dễ đọc chữ */
+    border: 1px solid #ddd;
+    z-index: 1000;
+    min-width: 120px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 0;
+    list-style: none;
+}
+
+/* Đảm bảo màu chữ của các mục trong dropdown luôn rõ ràng (khi menu mở) */
+.dropdown-menu li a {
+    text-decoration: none;
+    color: #333; /* Màu chữ tối để dễ đọc */
+    display: block;
+    width: 100%;
+}
+
+/* Màu nền khi hover */
+.dropdown-menu li a:hover {
+    background-color: #f5f5f5; /* Nền sáng khi hover */
+    color: #000; /* Màu chữ khi hover */
+}
+
+/* Hiển thị menu khi hover */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Hiển thị menu khi click */
+.dropdown-toggle.active + .dropdown-menu {
+    display: block; /* Hiển thị khi toggle menu */
+}
+
+/* Đảm bảo khi dropdown menu mở ra, màu chữ vẫn rõ ràng */
+.dropdown-menu li a {
+    color: #333 !important; /* Màu chữ đậm */
 }
