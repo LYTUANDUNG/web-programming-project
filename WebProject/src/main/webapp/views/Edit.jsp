@@ -39,7 +39,7 @@
       </div>
       <div class="button-container">
         <button type="submit" class="btn update-btn">Update</button>
-        <button type="button" class="btn exit-btn">Thoát</button>
+        <button type="button" class="btn exit-btn">Exit</button>
       </div>
     </form>
   </div>

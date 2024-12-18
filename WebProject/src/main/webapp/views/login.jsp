@@ -1,3 +1,6 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
+<%@ page import="javax.servlet.http.HttpSession"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -9,6 +12,16 @@
 	href="${pageContext.request.contextPath}/css/LoginStyle.css">
 </head>
 <body>
+	<!-- notification -->
+	<c:if test="${not empty message}">
+		<div class="alert ${type}" id="alertBox">
+			<span class="closebtn"
+				onclick="this.parentElement.style.display='none';">&times;</span>
+			${message}
+		</div>
+	</c:if>
+
+
 	<div class="container">
 		<div class="login-container">
 			<div class="form-container">
@@ -17,18 +30,17 @@
 				</h2>
 				<p>Lorem ipsum dolor sit amet elit. Sapiente sit aut eos
 					consectetur adipisicing.</p>
-				<form>
-					<label for="username">Username</label> <input type="email"
-						id="username" placeholder="your-email@gmail.com" required>
-
-					<label for="password">Password</label> <input type="password"
-						id="password" placeholder="Your Password" required>
+				<form action="${pageContext.request.contextPath}/SolveLogin">
+					<label for="username">Username</label>
+					 <input class="inputt" type="text" id="username" placeholder="User name" name="userName" required>
+						 <label for="password">Password</label> 
+						 <input class="inputt" type="password" id="password" placeholder="Your Password" name="password" required>
 
 					<div class="options">
 						<div id="flex_rememberMe">
-							<input type="checkbox"> <label>Remember</label><span>me</span>
+							<input  type="checkbox"> <label>Remember</label><span>me</span>
 						</div>
-						<a href="#" class="forgot-password">Forgot Password?</a>
+						<a href="${pageContext.request.contextPath}/views/Forgot.jsp" class="forgot-password">Forgot Password?</a>
 					</div>
 
 					<button type="submit" class="btn">Log In</button>

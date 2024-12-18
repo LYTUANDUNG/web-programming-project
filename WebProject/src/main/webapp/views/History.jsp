@@ -1,3 +1,6 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
+<%@ page import="javax.servlet.http.HttpSession"%>
 <!DOCTYPE html>
 <html lang="vn">
 <head>
@@ -28,6 +31,17 @@
 
 </head>
 <body class="historyPage">
+
+	<c:if test="${not empty message}">
+		<div class="alert ${type}" id="alertBox">
+			<span class="closebtn"
+				onclick="this.parentElement.style.display='none';">&times;</span>
+			${message}
+		</div>
+	</c:if>
+
+
+
 	<div class="header">
 		<div>
 			<h3>Stationery</h3>
@@ -68,8 +82,11 @@
 				</div>
 				<div class="items-list" id="items-list-1">
 					<div class="item">
+						<div>
+							ID Product:<span>12A7</span>
+						</div>
 						<div class="detail">
-							<span class="item-name">Bút Bi</span>
+							<span class="item-name">Black Board</span>
 						</div>
 						<div class="detail">
 							<span class="item-price">$200</span>
@@ -77,11 +94,18 @@
 						<div class="detail">
 							<span class="item-quantity">Quantity: 2</span>
 						</div>
+						<p>
+							<button class="btn" onclick="location.href='ProductReview.jsp'">
+								Feed Back</button>
+						</p>
 					</div>
 
 					<div class="item">
+						<div>
+							ID Product:<span>13A7</span>
+						</div>
 						<div class="detail">
-							<span class="item-name">Thước kẻ</span>
+							<span class="item-name">Ruler</span>
 						</div>
 						<div class="detail">
 							<span class="item-price">$100</span>
@@ -89,6 +113,10 @@
 						<div class="detail">
 							<span class="item-quantity">Quantity: 1</span>
 						</div>
+						<p>
+							<button class="btn" onclick="location.href='ProductReview.jsp'">
+								Feed Back</button>
+						</p>
 					</div>
 				</div>
 				<div id="more-infor" data-id="1">
@@ -115,12 +143,16 @@
 						<strong>Status:</strong> Pending
 					</p>
 
+
+
 				</div>
 				<div class="items-list" id="items-list-2">
 					<div class="item">
-
+						<div>
+							ID Product:<span>14A7</span>
+						</div>
 						<div class="detail">
-							<span class="item-name">Bảng Đen</span>
+							<span class="item-name">Black Board</span>
 						</div>
 						<div class="detail">
 							<span class="item-price">$120</span>
@@ -128,12 +160,18 @@
 						<div class="detail">
 							<span class="item-quantity">Quantity: 1</span>
 						</div>
+						<p>
+							<button class="btn" onclick="location.href='ProductReview.jsp'">
+								Feed Back</button>
+						</p>
 
 					</div>
 					<div class="item">
-
+						<div>
+							ID Product:<span>15A7</span>
+						</div>
 						<div class="detail">
-							<span class="item-name">Phấn viết bảng</span>
+							<span class="item-name">Chalk</span>
 						</div>
 						<div class="detail">
 							<span class="item-price">$200</span>
@@ -141,6 +179,11 @@
 						<div class="detail">
 							<span class="item-quantity">Quantity: 1</span>
 						</div>
+						<p>
+
+							<button class="btn" onclick="location.href='ProductReview.jsp'">
+								Feed Back</button>
+						</p>
 
 					</div>
 				</div>
@@ -170,9 +213,11 @@
 				</div>
 				<div class="items-list" id="items-list-3">
 					<div class="item">
-
+						<div>
+							ID Product:<span>16A7</span>
+						</div>
 						<div class="detail">
-							<span class="item-name">Ghế xoay</span>
+							<span class="item-name">Swivel Chair</span>
 						</div>
 						<div class="detail">
 							<span class="item-price">$500</span>
@@ -180,12 +225,18 @@
 						<div class="detail">
 							<span class="item-quantity">Quantity: 12</span>
 						</div>
+						<p>
+							<button class="btn" onclick="location.href='ProductReview.jsp'">
+								Feed Back</button>
+						</p>
 
 					</div>
 					<div class="item">
-
+						<div>
+							ID Product:<span>17A7</span>
+						</div>
 						<div class="detail">
-							<span class="item-name">Bàn học</span>
+							<span class="item-name">Table</span>
 						</div>
 						<div class="detail">
 							<span class="item-price">$100</span>
@@ -193,6 +244,10 @@
 						<div class="detail">
 							<span class="item-quantity">Quantity: 5</span>
 						</div>
+						<p>
+							<button class="btn" onclick="location.href='ProductReview.jsp'">
+								Feed Back</button>
+						</p>
 
 					</div>
 				</div>
@@ -222,9 +277,11 @@
 				</div>
 				<div class="items-list" id="items-list-4">
 					<div class="item">
-
+						<div>
+							ID Product:<span>12A7</span>
+						</div>
 						<div class="detail">
-							<span class="item-name">But bi</span>
+							<span class="item-name">Pen</span>
 						</div>
 						<div class="detail">
 							<span class="item-price">$100</span>
@@ -232,11 +289,18 @@
 						<div class="detail">
 							<span class="item-quantity">Quantity: 11</span>
 						</div>
+						<p>
+							<button class="btn" onclick="location.href='ProductReview.jsp'">
+								Feed Back</button>
+						</p>
 
 					</div>
 					<div class="item">
+						<div>
+							ID Product:<span>14A7</span>
+						</div>
 						<div class="detail">
-							<span class="item-name">Bảng đen</span>
+							<span class="item-name">Black Board</span>
 						</div>
 						<div class="detail">
 							<span class="item-price">$500</span>
@@ -244,6 +308,10 @@
 						<div class="detail">
 							<span class="item-quantity">Quantity: 12</span>
 						</div>
+						<p>
+							<button class="btn" onclick="location.href='ProductReview.jsp'">
+								Feed Back</button>
+						</p>
 					</div>
 				</div>
 				<div id="more-infor" data-id="4">
@@ -272,8 +340,11 @@
 				</div>
 				<div class="items-list" id="items-list-5">
 					<div class="item">
+						<div>
+							ID Product:<span>16A7</span>
+						</div>
 						<div class="detail">
-							<span class="item-name">Ghế xoay</span>
+							<span class="item-name">Swivel Chair</span>
 						</div>
 						<div class="detail">
 							<span class="item-price">$500</span>
@@ -281,10 +352,17 @@
 						<div class="detail">
 							<span class="item-quantity">Quantity: 12</span>
 						</div>
+						<p>
+							<button class="btn" onclick="location.href='ProductReview.jsp'">
+								Feed Back</button>
+						</p>
 					</div>
 					<div class="item">
+						<div>
+							ID Product:<span>13A7</span>
+						</div>
 						<div class="detail">
-							<span class="item-name">Thước kẻ</span>
+							<span class="item-name">Ruler</span>
 						</div>
 						<div class="detail">
 							<span class="item-price">$100</span>
@@ -292,10 +370,17 @@
 						<div class="detail">
 							<span class="item-quantity">Quantity: 1</span>
 						</div>
+						<p>
+							<button class="btn" onclick="location.href='ProductReview.jsp'">
+								Feed Back</button>
+						</p>
 					</div>
 					<div class="item">
+						<div>
+							ID Product:<span>12A7</span>
+						</div>
 						<div class="detail">
-							<span class="item-name">Bút Bi</span>
+							<span class="item-name">Pen</span>
 						</div>
 						<div class="detail">
 							<span class="item-price">$200</span>
@@ -303,10 +388,17 @@
 						<div class="detail">
 							<span class="item-quantity">Quantity: 2</span>
 						</div>
+						<p>
+							<button class="btn" onclick="location.href='ProductReview.jsp'">
+								Feed Back</button>
+						</p>
 					</div>
 					<div class="item">
+						<div>
+							ID Product:<span>15A7</span>
+						</div>
 						<div class="detail">
-							<span class="item-name">Phấn viết bảng</span>
+							<span class="item-name">Chalk</span>
 						</div>
 						<div class="detail">
 							<span class="item-price">$200</span>
@@ -314,10 +406,17 @@
 						<div class="detail">
 							<span class="item-quantity">Quantity: 1</span>
 						</div>
+						<p>
+							<button class="btn" onclick="location.href='ProductReview.jsp'">
+								Feed Back</button>
+						</p>
 					</div>
 					<div class="item">
+						<div>
+							ID Product:<span>17A7</span>
+						</div>
 						<div class="detail">
-							<span class="item-name">Bàn học</span>
+							<span class="item-name">Table</span>
 						</div>
 						<div class="detail">
 							<span class="item-price">$100</span>
@@ -325,6 +424,10 @@
 						<div class="detail">
 							<span class="item-quantity">Quantity: 5</span>
 						</div>
+						<p>
+							<button class="btn" onclick="location.href='ProductReview.jsp'">
+								Feed Back</button>
+						</p>
 					</div>
 				</div>
 				<div id="more-infor" data-id="5">

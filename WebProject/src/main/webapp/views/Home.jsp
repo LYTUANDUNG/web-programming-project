@@ -12,9 +12,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title><f:message bundle="${bundle}" key="home.title" /></title>
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/css/Home.css">
+	   <link rel="stylesheet"
+	href="${pageContext.request.contextPath}/css/Header.css">
 <script src="${pageContext.request.contextPath}/js/Header.js"></script>
 <script src="${pageContext.request.contextPath}/js/Home.js"></script>
 </head>
@@ -23,6 +26,7 @@
 	<div id="header-container">
 		<jsp:include page="Header.jsp" />
 	</div>
+
 
 	<div class="hero">
 		<div class="container_title">

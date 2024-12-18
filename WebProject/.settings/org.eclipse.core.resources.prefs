@@ -4,5 +4,10 @@ encoding//src/main/java/lang/lang_vi_VN.properties=UTF-8
 encoding//src/main/webapp/views/Admin.jsp=UTF-8
 encoding//src/main/webapp/views/Cart.jsp=UTF-8
 encoding//src/main/webapp/views/History.jsp=UTF-8
+<<<<<<< HEAD
 encoding//src/main/webapp/views/Home.jsp=UTF-8
 encoding//src/main/webapp/views/Shop.jsp=UTF-8
+=======
+encoding//src/main/webapp/views/User.jsp=UTF-8
+encoding/<project>=UTF-8
+>>>>>>> 1ff7a20098a62873385416dd5ab5a27499989a9d
