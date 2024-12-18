@@ -111,3 +111,65 @@ input {
 	gap:2px;
 }
 
+
+
+/* Style cho alert */
+.alert {
+    padding: 15px;
+    position: fixed;
+    bottom: 20px;  /* Bắt đầu từ dưới màn hình */
+    right: 20px;   /* Đảm bảo alert ở góc phải */
+    border-radius: 10px;
+    color: black;  /* Chữ màu đen */
+    font-size: 16px;
+    width: 300px;
+    z-index: 9999;  /* Đảm bảo alert luôn xuất hiện trên cùng */
+    background-color: #FFD700; /* Màu vàng */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: slideUp 1s ease-out; /* Thêm hiệu ứng trôi từ dưới lên */
+}
+
+/* Nút đóng alert */
+.closebtn {
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+.closebtn:hover {
+    color: #555;
+}
+
+/* Hiệu ứng trôi từ dưới lên */
+@keyframes slideUp {
+    0% {
+        bottom: -100px;  /* Bắt đầu từ dưới màn hình */
+        opacity: 0;
+    }
+    100% {
+        bottom: 20px;  /* Dừng ở vị trí mong muốn */
+        opacity: 1;
+    }
+}
+/*css input*/
+.inputt {
+	height:38.4px;
+	outline: none;
+	padding: 0 15px;
+	font-size: 17px;
+	font-weight: 400;
+	color: #333;
+	border: 1.5px solid #C7BEBE;
+	border-bottom-width: 2.5px;
+	border-radius: 6px;
+	transition: all 0.3s ease;
+}
+
+.inputt:focus {
+	border-color: #3B6463;
+}
+

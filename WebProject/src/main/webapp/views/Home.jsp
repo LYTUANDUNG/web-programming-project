@@ -6,19 +6,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Home</title>
-<link rel="stylesheet"
+  <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/css/Home.css">
+	   <link rel="stylesheet"
+	href="${pageContext.request.contextPath}/css/Header.css">
 <script src="${pageContext.request.contextPath}/js/Header.js"></script>
 <script src="${pageContext.request.contextPath}/js/Home.js"></script>
 </head>
 <body>
 
-	<div id="header-container">
+	<!--<div id="header-container">-->
 		<%@ include file="Header.jsp"%>
-		<!-- Thêm header từ file Header.jsp -->
-	</div>
-	<!-- Include Script -->
-
+		<!-- ThÃªm header tá»« file Header.jsp -->
+	<!--</div>-->  
 
 	<div class="hero">
 		<div class="container_title">
