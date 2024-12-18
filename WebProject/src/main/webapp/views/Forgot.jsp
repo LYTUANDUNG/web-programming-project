@@ -11,16 +11,20 @@
 <body>
 	<div class="wrapper">
 		<h2>Get Password Through Email</h2>
-		<form action="#">
+		<form action="${pageContext.request.contextPath}/SolveForgotPassword">
 			<div class="input-box">
-				<input type="text" placeholder="Enter your Email" required>
+				<input name="userMail" id="forgot_text" type="text" placeholder="Enter your Email"
+					required
+					style="height: 38.4px; line-height: 38.4px; box-sizing: border-box;">
+
 			</div>
 			<div class="flex under_10px">
 				<div class="input-box button">
 					<input type="Submit" value="Send">
 				</div>
 				<div class="text">
-					<a href="#">Back to Login</a>
+					<a href="${pageContext.request.contextPath}/views/login.jsp">Back
+						to Login</a>
 				</div>
 			</div>
 		</form>

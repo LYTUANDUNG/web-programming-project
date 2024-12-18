@@ -170,7 +170,6 @@ body {
     transform: scale(1.05) !important;
 }
 /* Style cho alert */
-/* Style cho alert */
 .alert {
     padding: 15px;
     position: fixed;
@@ -204,11 +203,11 @@ body {
 /* Hiệu ứng trôi từ dưới lên */
 @keyframes slideUp {
     0% {
-        bottom: -100px;  /* Bắt đầu từ dưới màn hình */
+        bottom: -100px; 
         opacity: 0;
     }
     100% {
-        bottom: 20px;  /* Dừng ở vị trí mong muốn */
+        bottom: 20px; 
         opacity: 1;
     }
 }

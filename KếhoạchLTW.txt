@@ -1,0 +1,9 @@
+-Trang Giảm Giá (Sales)(Dũng)
+-Trang Đánh Giá(trong lịch sử mua hàng)(Ratings) (Hùng) 
+-Trang Wishlist (danh sách yêu thích) (Dũng)
+--------------------------------------------------
+-Quốc Tế Hóa (Internationalization - I18N) (Dũng)
+-Bảo mật login, giao thức mail quên mk (Hùng)
+--------------------------------------------------
+-Viết trang .jsp nào viết servlet trang đó 
+-------------------------------------------------- 
