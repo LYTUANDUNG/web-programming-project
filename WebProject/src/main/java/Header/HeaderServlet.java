@@ -1,4 +1,4 @@
-package servlet;
+package Header;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
@@ -13,5 +13,8 @@ public class HeaderServlet extends HttpServlet {
             request.getSession().setAttribute("lang", lang);  // Lưu ngôn ngữ vào session
         }
         response.sendRedirect(request.getHeader("Referer"));  // Quay lại trang hiện tại
+       // System.out.println("Selected language: " + lang);
+     
+       
     }
 }

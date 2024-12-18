@@ -29,7 +29,7 @@
 	<nav class="custom-navbar">
 		<!-- CHỮ SHOP BÊN TRÁI -->
 		<div class="navbar-brand-container">
-			<a class="navbar-brand" href="home.jsp"><f:message
+			<a class="navbar-brand" href="Home.jsp"><f:message
 					bundle="${bundle}" key="header.brand" /></a>
 		</div>
 
@@ -55,12 +55,22 @@
 			<ul class="custom-navbar-cta">
 				<li class="nav-item"><f:message bundle="${bundle}"
 						key="header.welcome" /> , ${sessionScope.adminName}</li>
-				<li><a class="nav-link" href="user.jsp"><i
-						class="fa-solid fa-user"></i></a></li>
-				<li><a class="nav-link" href="cart.jsp"><i
+
+				<li><a class="nav-link" href="Cart.jsp"><i
 						class="fa-solid fa-cart-shopping"></i></a></li>
-				<li><a class="nav-link" href="wishlist.jsp"><i
+				<li><a class="nav-link" href="Wishlist.jsp"><i
 						class="fa-solid fa-heart"></i></a></li>
+
+				<li class="dropdown"><a class="nav-link dropdown-toggle"
+					href="#" id="userDropdown" role="button" data-bs-toggle="dropdown"
+					aria-expanded="false"> <i class="fa-solid fa-user"></i> 
+				</a>
+					<ul class="dropdown-menu" aria-labelledby="userDropdown">
+						<li><a class="dropdown-item" href="Edit.jsp"><f:message
+									bundle="${bundle}" key="header.edit" /></a></li>
+						<li><a class="dropdown-item" href="LogoutServlet"><f:message
+									bundle="${bundle}" key="header.logout" /></a></li>
+					</ul></li>
 
 				<!-- Language Dropdown -->
 				<li class="dropdown"><a class="nav-link dropdown-toggle"
@@ -69,9 +79,10 @@
 						class="fa-solid fa-globe"></i>
 				</a>
 					<ul class="dropdown-menu" aria-labelledby="languageDropdown">
-						<li><a class="dropdown-item" href="HeaderServlet?lang=vi_VN">Tiếng
-								Việt</a></li>
-						<li><a class="dropdown-item" href="HeaderServlet?lang=en_US">English</a></li>
+						<li><a class="dropdown-item" href="HeaderServlet?lang=vi_VN"><f:message
+									bundle="${bundle}" key="header.vietnam" /></a></li>
+						<li><a class="dropdown-item" href="HeaderServlet?lang=en_US"><f:message
+									bundle="${bundle}" key="header.english" /></a></li>
 					</ul></li>
 			</ul>
 		</div>

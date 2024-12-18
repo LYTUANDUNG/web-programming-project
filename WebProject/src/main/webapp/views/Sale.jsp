@@ -26,6 +26,12 @@
             </div>
         </div>
     </div>
+    <div class="search-container">
+        <form action="search.jsp" method="get">
+            <input type="text" name="query" class="search-input" placeholder="Search for products...">
+            <button type="submit" class="search-button">Look up</button>
+        </form>
+    </div>
     <div class="product-section">
         <div class="container">
             <div class="row align-items-center">

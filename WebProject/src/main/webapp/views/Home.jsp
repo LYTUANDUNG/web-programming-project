@@ -1,4 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="f" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <f:setBundle basename="lang.lang" var="bundle" scope="session" />
@@ -40,8 +41,8 @@
 							<f:message bundle="${bundle}" key="home.description" />
 						</p>
 						<p>
-							<a href="#" class="btn btn-secondary me-2"><f:message bundle="${bundle}"
-									key="home.shopNow" /></a> <a href="#"
+							<a href="Shop.jsp" class="btn btn-secondary me-2"><f:message bundle="${bundle}"
+									key="home.shopNow" /></a> <a href="Contact.jsp"
 								class="btn btn-white-outline"><f:message bundle="${bundle}" 
 									key="home.explore" /></a>
 						</p>

@@ -6,8 +6,6 @@
                         http://java.sun.com/xml/ns/javaee/web-app_4_0.xsd" 
     version="4.0">
 
-
-
   <!-- Định nghĩa các file chào mừng -->
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
@@ -36,26 +34,30 @@
     <filter-name>SetCharacterEncodingFilter</filter-name>
     <url-pattern>/*</url-pattern> <!-- Áp dụng cho tất cả các yêu cầu -->
   </filter-mapping>
- <!-- Định nghĩa servlet -->
-    <servlet>
-        <servlet-name>HeaderServlet</servlet-name>
-        <servlet-class>servlet.HeaderServlet</servlet-class>
-    </servlet>
 
-    <!-- Ánh xạ servlet với URL -->
-    <servlet-mapping>
-        <servlet-name>HeaderServlet</servlet-name>
-        <url-pattern>/views/HeaderServlet</url-pattern>
-    </servlet-mapping>
-    
-    
-</web-app>
+  <!-- Định nghĩa servlet -->
+  <servlet>
+    <servlet-name>HeaderServlet</servlet-name>
+    <servlet-class>Header.HeaderServlet</servlet-class>
+  </servlet>
+
+  <!-- Ánh xạ servlet với URL -->
+  <servlet-mapping>
+    <servlet-name>HeaderServlet</servlet-name>
+    <url-pattern>/views/HeaderServlet</url-pattern>
+  </servlet-mapping>
   <resource-ref>
     <description>SQL Server DataSource</description>
     <res-ref-name>jdbc/sql</res-ref-name>
     <res-type>javax.sql.DataSource</res-type>
     <res-auth>Container</res-auth>
   </resource-ref>
+  </web-app>
+  
+
+
+    
+    
+
  
-</web-app>
 

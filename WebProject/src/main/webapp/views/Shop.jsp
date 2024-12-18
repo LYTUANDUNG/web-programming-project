@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,13 +13,8 @@
     
     <div id="header-container">
 		<%@ include file="Header.jsp"%>
-		<!-- ThÃªm header tá»« file Header.jsp -->
-		<div class="search-container">
-    <form action="search.jsp" method="get">
-        <input type="text" name="query" class="search-input" placeholder="Tìm kiếm sản phẩm...">
-        <button type="submit" class="search-button">Look up</button>
-    </form>
-</div>
+		
+		
 		
 	</div>  
     <div class="hero">
@@ -32,6 +27,12 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div class="search-container">
+        <form action="search.jsp" method="get">
+            <input type="text" name="query" class="search-input" placeholder="Search for products...">
+            <button type="submit" class="search-button">Look up</button>
+        </form>
     </div>
     <div class="product-section">
         <div class="container">
@@ -176,7 +177,7 @@
     </div>
         <div id="footer-container">
 		   <%@ include file="Footer.jsp"%>
-		<!-- ThÃªm header tá»« file Header.jsp -->
+	
 	</div>
     
 </body>

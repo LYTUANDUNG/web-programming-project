@@ -1,7 +1,9 @@
 @charset "UTF-8";
-body{
-    font-family: 'Trajan', sans-serif; 
+
+body {
+    font-family: 'Trajan', sans-serif;
 }
+
 /* ĐẶT CHIỀU CAO VÀ MÀU NỀN CHO THANH NAVBAR */
 .custom-navbar {
     display: flex;
@@ -42,6 +44,7 @@ body{
     position: relative; /* Để thêm hiệu ứng */
     transition: color 0.3s ease, font-weight 0.3s ease; /* Hiệu ứng chuyển màu và đậm chữ */
 }
+
 .custom-navbar-nav .nav-link:hover {
     color: #f8c292; /* Màu chữ khi hover */
 }
@@ -56,6 +59,7 @@ body{
     left: 0;
     transition: width 0.3s ease-in-out;
 }
+
 .custom-navbar-nav .nav-link:hover::after {
     width: 100%;
 }
@@ -63,8 +67,8 @@ body{
 /* GẠCH CHÂN CỐ ĐỊNH KHI Ở TRANG HIỆN TẠI */
 .custom-navbar-nav .nav-link.active::after {
     width: 100%;
-    
 }
+
 /* MENU BÊN PHẢI */
 .menu-right {
     display: flex;
@@ -78,12 +82,7 @@ body{
     display: flex;
     gap: 15px;
     list-style: none;
-    margin:0px;
-}
-
-/* ĐỊNH DẠNG CHO ICON VÀ Ô TÌM KIẾM */
-.search-container {
-    position: relative; /* Định vị tương đối để input phụ thuộc vào container */
+    margin: 0px;
 }
 
 /* ĐỊNH DẠNG CHO ICON VÀ Ô TÌM KIẾM */
@@ -100,7 +99,6 @@ body{
 .search-icon:hover {
     transform: scale(1.2);
 }
-
 
 /* Khi search-container được kích hoạt */
 .search-container.active .search-input {
@@ -121,18 +119,17 @@ body{
 
 /* Thay đổi màu của các icon khi hover */
 .custom-navbar-cta li a i.fa-user {
-    color: black; /* Màu trắng cho icon login */
+    color: #fff; /* Màu trắng cho icon login */
 }
 
 .custom-navbar-cta li a i.fa-cart-shopping {
-    color: black; /* Màu trắng cho icon giỏ hàng */
+    color: #fff; /* Màu trắng cho icon giỏ hàng */
 }
 
 /* Bỏ hiệu ứng hover, chỉ đơn giản là màu trắng */
 .custom-navbar-cta li a i:hover {
     color: black; /* Giữ màu trắng khi hover */
 }
-
 
 /* Định dạng chung cho dropdown */
 .dropdown {
@@ -150,6 +147,7 @@ body{
     top: 100%;
     left: 0;
     background-color: #fff; /* Nền sáng để dễ đọc chữ */
+    color: black;
     border: 1px solid #ddd;
     z-index: 1000;
     min-width: 120px;
@@ -161,7 +159,7 @@ body{
 /* Đảm bảo màu chữ của các mục trong dropdown luôn rõ ràng (khi menu mở) */
 .dropdown-menu li a {
     text-decoration: none;
-    color: #333; /* Màu chữ tối để dễ đọc */
+    color: #000; /* Màu chữ tối để dễ đọc */
     display: block;
     width: 100%;
 }
@@ -186,3 +184,14 @@ body{
 .dropdown-menu li a {
     color: #333 !important; /* Màu chữ đậm */
 }
+
+/* Đảm bảo rằng dropdown menu sẽ hiển thị bên trái của dropdown toggle */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    left: 0;  /* Đảm bảo menu xuất hiện bên trái của phần tử chứa */
+    right: auto; /* Không sử dụng "right" */
+    top: 100%; /* Đặt menu dưới phần tử chứa */
+    z-index: 1000; /* Đảm bảo menu hiển thị trên các phần tử khác */
+}
+
