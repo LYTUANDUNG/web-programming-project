@@ -1,5 +1,8 @@
 @charset "UTF-8";
 /* Phần hero */
+* {
+	margin:0;
+}
 .hero {
     background-image: url('https://twigastationers.com/wp-content/uploads/home-stationery1.jpg');
     background-size: cover;

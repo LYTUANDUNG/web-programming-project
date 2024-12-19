@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sale</title>
 <link rel="stylesheet"
-	href="${pageContext.request.contextPath}/css/Shop.css">
+	href="${pageContext.request.contextPath}/css/Sale.css">
 <script src="${pageContext.request.contextPath}/js/Home.js"></script>
 </head>
 
@@ -20,7 +20,7 @@
             <div class="row justify-content-between">
                 <div class="col-lg-5">
                     <div class="intro-excerpt">
-                        <h1>Sale</h1>
+                        <h1>Sale up to 50%</h1>
                     </div>
                 </div>
             </div>

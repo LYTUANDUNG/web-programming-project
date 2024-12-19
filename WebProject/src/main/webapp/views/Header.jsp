@@ -43,11 +43,11 @@
 							bundle="${bundle}" key="header.shop" /></a></li>
 				<li class="nav-item"><a class="nav-link" href="Sale.jsp"><f:message
 							bundle="${bundle}" key="header.about" /></a></li>
-				<li class="nav-item"><a class="nav-link" href="services.jsp"><f:message
+				<li class="nav-item"><a class="nav-link" href="AboutUs.jsp"><f:message
 							bundle="${bundle}" key="header.services" /></a></li>
 				<li class="nav-item"><a class="nav-link" href="blog.jsp"><f:message
 							bundle="${bundle}" key="header.blog" /></a></li>
-				<li class="nav-item"><a class="nav-link" href="contact.jsp"><f:message
+				<li class="nav-item"><a class="nav-link" href="Contact.jsp"><f:message
 							bundle="${bundle}" key="header.contact" /></a></li>
 			</ul>
 

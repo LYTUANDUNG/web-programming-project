@@ -11,6 +11,7 @@ body {
     align-items: center; /* Căn giữa theo chiều dọc */
     background: #3b5d50 !important;
     padding: 10px 40px;
+    
 }
 
 /* ĐỊNH DẠNG CHỮ SHOP */
@@ -189,9 +190,68 @@ body {
 .dropdown-menu {
     display: none;
     position: absolute;
-    left: 0;  /* Đảm bảo menu xuất hiện bên trái của phần tử chứa */
+    left: -100px;  /* Đảm bảo menu xuất hiện bên trái của phần tử chứa */
     right: auto; /* Không sử dụng "right" */
     top: 100%; /* Đặt menu dưới phần tử chứa */
     z-index: 1000; /* Đảm bảo menu hiển thị trên các phần tử khác */
 }
+.search-container input[type="text"] {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 200px;
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+    z-index: 10;
+    transition: width 0.3s ease-in-out;
+    border-radius: 8px; /* Bo góc cho menu */
+    width: 150px; /* Độ rộng menu */
+    padding: 8px 0; /* Khoảng cách trên dưới */
+}
+
+.search-container.active input[type="text"] {
+    display: block;
+    width: 250px;
+}
+
+/* Hiển thị menu khi hover */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Định dạng mục trong menu */
+.dropdown-menu li {
+    padding: 8px 12px; /* Khoảng cách giữa các mục */
+}
+
+.dropdown-menu li a {
+    text-decoration: none; /* Xóa gạch chân */
+    color: #333; /* Màu chữ đen */
+    font-size: 14px; /* Kích thước chữ */
+    transition: background-color 0.3s ease; /* Hiệu ứng hover */
+}
+
+/* Thay đổi màu khi hover */
+.dropdown-menu li a:hover {
+    background-color: #f8c292; /* Màu nền khi hover */
+    color: #fff; /* Màu chữ khi hover */
+}
+
+/* Định dạng icon */
+.dropdown-toggle i {
+    margin-left: 5px; /* Khoảng cách giữa chữ và icon */
+    color: #fff; /* Màu icon trắng */
+}
+
+/* Khoảng cách giữa các menu */
+.menu-right {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Khoảng cách giữa menu User và Language */
+}
+
 

@@ -186,3 +186,47 @@ ul.list-unstyled li a:hover {
 	border-radius: 10px;
 	
 }
+
+.custom-footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}
+
+.footer-nav {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.footer-nav li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.footer-nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-nav a:hover {
+    text-decoration: underline;
+}
+
+.footer-social a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.footer-social a:hover {
+    color: #00aced;
+}
+
+.footer-copyright {
+    margin-top: 15px;
+    font-size: 12px;
+}
